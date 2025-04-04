@@ -105,8 +105,8 @@
                         <tr>
                             <td>{{ item_name }}</td>
                             <td><span class="badge bg-info">{{ item_details.item_type }}</span></td>
-                            <td>${{ item_details.price }}</td>
-                            <td>${{ (item_details.price * (1 - item_details.discount / 100)) | round(2) }}</td>
+                            <td>₹{{ item_details.price }}</td>
+                            <td>₹{{ (item_details.price * (1 - item_details.discount / 100)) | round(2) }}</td>
                             <td>
                                 {% if item_details.stock > 10 %}
                                     <span class="badge bg-success">{{ item_details.stock }}</span>

@@ -193,7 +193,7 @@
                             <div class="item-details">
                                 <div class="item-name">{{ item.name }}</div>
                                 <div class="item-type">{{ item.type }}</div>
-                                <p>Price: ${{ item.final_price | round(2) }}</p>
+                                <p>Price: ₹{{ item.final_price | round(2) }}</p>
                                 <p><i class="fas fa-store me-2"></i>Store Location: {{ item.store_location }}</p>
                                 <div class="quantity-controls">
                                     <form method="post" action="{{ url_for('customer.update_cart', item_name=item_name) }}">
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                             <div class="item-price">
-                                <div class="fw-bold mb-2">${{ (item.final_price * item.quantity) | round(2) }}</div>
+                                <div class="fw-bold mb-2">₹{{ (item.final_price * item.quantity) | round(2) }}</div>
                                 <form method="post" action="{{ url_for('customer.remove_item', item_name=item_name) }}">
                                     <button type="submit" class="btn btn-danger btn-sm">
                                         <i class="fas fa-trash me-1"></i> Remove
@@ -223,7 +223,7 @@
                 <div class="payment-section">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                         <h3>Payment Details</h3>
-                        <div class="subtotal">Subtotal: ${{ subtotal | round(2) }}</div>
+                        <div class="subtotal">Subtotal: ₹{{ subtotal | round(2) }}</div>
                     </div>
                     
                     <form method="POST" action="{{ url_for('customer.process_purchase') }}">

@@ -98,7 +98,7 @@
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
                     {% for category, message in messages %}
-                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        <div id="flash-messages" class="flash-message alert alert-{{ category }} alert-dismissible fade show" role="alert">
                             {{ message }}
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
@@ -106,6 +106,18 @@
                 {% endif %}
             {% endwith %}
             
+            <script>
+                setTimeout(function () {
+                document.querySelectorAll('.flash-message').forEach(function (flash) {
+                    flash.style.transition = "opacity 0.5s";
+                    flash.style.opacity = "0";
+                    setTimeout(function () {
+                    flash.remove();
+                    }, 500);
+                });
+                }, 1000); // 1 second before disappearing
+            </script>
+
             <div class="item-info">
                 <h5>{{ item_name }}</h5>
                 <span class="badge bg-info">{{ item_type }}</span>
@@ -117,7 +129,7 @@
                 <div class="form-group">
                     {{ form.price.label(class="form-label") }}
                     <div class="input-group">
-                        <span class="input-group-text">$</span>
+                        <span class="input-group-text">₹</span>
                         {{ form.price(class="form-control", placeholder="0.00") }}
                     </div>
                     {% if form.price.errors %}

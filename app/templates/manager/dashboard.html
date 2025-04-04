@@ -119,13 +119,25 @@
             {% with messages = get_flashed_messages(with_categories=true) %}
               {% if messages %}
                 {% for category, message in messages %}
-                  <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                  <div id="flash-messages" class="flash-message alert alert-{{ category }} alert-dismissible fade show" role="alert">
                       {{ message }}
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                   </div>
                 {% endfor %}
               {% endif %}
             {% endwith %}
+
+            <script>
+                setTimeout(function () {
+                document.querySelectorAll('.flash-message').forEach(function (flash) {
+                    flash.style.transition = "opacity 0.5s";
+                    flash.style.opacity = "0";
+                    setTimeout(function () {
+                    flash.remove();
+                    }, 500);
+                });
+                }, 1000); // 1 second before disappearing
+            </script>
 
             <!-- Items Table -->
             <h3 class="mt-4 mb-3"><i class="fas fa-clipboard-list me-2"></i>Items in {{ store.name }}</h3>
@@ -147,8 +159,8 @@
                         <tr>
                             <td>{{ item_name }}</td>
                             <td><span class="badge bg-info">{{ item_details.item_type }}</span></td>
-                            <td>${{ item_details.price }}</td>
-                            <td>${{ (item_details.price * (1 - item_details.discount / 100)) | round(2) }}</td>
+                            <td>₹{{ item_details.price }}</td>
+                            <td>₹{{ (item_details.price * (1 - item_details.discount / 100)) | round(2) }}</td>
                             <td>
                                 {% if item_details.stock > 10 %}
                                     <span class="text-success">{{ item_details.stock }}</span>
