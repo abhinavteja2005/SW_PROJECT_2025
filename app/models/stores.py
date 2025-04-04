@@ -8,6 +8,7 @@ stores = {
         "manager": "manager1",
         "items": {
             "Apple": {"price": 10, "stock": 20, "discount": 0, "item_type": "Fruits"},
+            "3 Apples": {"price": 30, "stock": 5, "discount": 10, "item_type": "Fruits"},
             "Banana": {"price": 5, "stock": 30, "discount": 10, "item_type": "Fruits"},
             "Milk": {"price": 50, "stock": 15, "discount": 0, "item_type": "Dairy"},
             "Bread": {"price": 25, "stock": 10, "discount": 5, "item_type": "Bakery"},
