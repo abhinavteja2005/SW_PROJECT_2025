@@ -5,11 +5,11 @@ FASTx is a **Flask-based full-stack web application**, inspired by Blinkit, desi
 
 ---
 
-## 🚀 Objective
+## Objective
 
 To create a modular, scalable, and testable delivery system that supports:
 
-### 🛒 Customer Interface
+### Customer Interface
 
 - Browse items from multiple stores with detailed product information.
 - Search by item name and category.
@@ -17,8 +17,9 @@ To create a modular, scalable, and testable delivery system that supports:
 - Shopping cart management (add/remove functionality).
 - Multiple payment options: **Card, UPI, COD**.
 - View order history and track orders in real-time.
+- I added a "Complete Vide Guide to the webapp", please check it as well, it can be seen in the repo.
 
-### 🚚 Delivery System
+### Delivery System
 
 - Track real-time order status: *collected, in transit, delivered*.
 - Maintain delivery history for all agents.
@@ -30,7 +31,7 @@ To create a modular, scalable, and testable delivery system that supports:
   - Customer addresses
   - Order status
 
-### 🏬 Store Management
+### Store Management
 
 - Dedicated dashboards for each store manager (3 stores total).
 - Inventory management: add, edit, remove items.
@@ -39,13 +40,13 @@ To create a modular, scalable, and testable delivery system that supports:
 - Handle and track order fulfillment.
 - View store-specific analytics and order history.
 
-### 🛠️ Admin Dashboard
+### Admin Dashboard
 
 - Oversee all users, stores, and orders.
 - Monitor delivery agents and their assignments.
 - View system-wide statistics and performance analytics.
 
-### 🔐 Authentication & Security
+### Authentication & Security
 
 - Secure login system for all roles (customer, delivery, store, admin).
 - **Role-based access control**.
@@ -54,7 +55,7 @@ To create a modular, scalable, and testable delivery system that supports:
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 ```bash
 SW_PROJECT_2025/
@@ -82,13 +83,13 @@ SW_PROJECT_2025/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 * All modules include **unit and integration tests** under the `tests/` directory.
 * Uses **pytest** for testing.
 * Code coverage is tracked via `coverage.py` and exported to `coverage.xml`.
 
-### 📦 To run tests:
+### To run tests:
 
 ```bash
 pip install -r requirements.txt
@@ -97,11 +98,11 @@ pytest --cov=app tests/
 
 ---
 
-## ⚙️ CI/CD Integration
+## CI/CD Integration
 
 The project uses **GitHub Actions** for Continuous Integration.
 
-### 📄 `.github/workflows/python-app.yml`
+### `.github/workflows/python-app.yml`
 
 The workflow performs:
 
@@ -115,7 +116,7 @@ This ensures all pushes and pull requests are automatically validated.
 
 ---
 
-## ✅ Getting Started Locally
+## Getting Started Locally
 
 1. **Clone the repository:**
 
@@ -144,7 +145,7 @@ This ensures all pushes and pull requests are automatically validated.
 
 ---
 
-## 👤 Roles Summary
+## Roles Summary
 
 | Role          | Features                                                            |
 | ------------- | ------------------------------------------------------------------- |
@@ -155,7 +156,7 @@ This ensures all pushes and pull requests are automatically validated.
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 * **Backend**: Python, Flask
 * **Frontend**: HTML, CSS, Jinja2 Templates
@@ -166,10 +167,10 @@ This ensures all pushes and pull requests are automatically validated.
 
 ---
 
-## 📎 Contributors
+## Contributors
 
 * [Dasari Veera Venkata Abhinav Teja](https://github.com/abhinavteja2005)
-* [Pulugu Lokeswara Reddy]
+* [Pulugu Lokeswara Reddy](https://github.com/lokii-09)
 --
 
 ```
